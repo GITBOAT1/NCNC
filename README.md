@@ -1,4 +1,4 @@
-# React Firebase Expense Tracker
+# NCNC noble Contributions
 
 This project includes React components and custom hooks for building an expense tracker application with Firebase integration. Below are the key components and hooks documented:
 
