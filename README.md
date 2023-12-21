@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# React Firebase Expense Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project includes React components and custom hooks for building an expense tracker application with Firebase integration. Below are the key components and hooks documented:
 
-## Available Scripts
+## `App.js`
 
-In the project directory, you can run:
+The main application component that sets up routing for authentication and expense tracker pages.
 
-### `npm start`
+## `Auth.js`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A React component for user authentication. It uses Firebase authentication with Google and stores user information in local storage.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## `ExpenseTracker.js`
 
-### `npm test`
+The main expense tracker component that allows users to add transactions, displays the current balance, and shows a list of transactions. It utilizes custom hooks for adding and retrieving transactions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## `useAddTransaction.js`
 
-### `npm run build`
+A custom hook for adding transactions to the Firestore database. It includes functions to add transactions with details like description, amount, and type.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## `useGetTransactions.js`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A custom hook for retrieving user-specific transactions from Firestore. It includes functions to query the Firestore database and update the state with real-time transaction data.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## `useGetUserInfo.js`
 
-### `npm run eject`
+A custom hook for retrieving user information from local storage. It parses user details stored in the "auth" key and returns an object containing the user's name, profile photo, user ID, and authentication status.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   to use this app you would need a config forlder in the src "src/config/firebase-config.js" and setup a  firebase API to
+   access it...
