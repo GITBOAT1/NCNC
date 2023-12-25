@@ -3,6 +3,7 @@ import './App.css';  // Importing styles for the App component
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  // Importing components from 'react-router-dom' for handling routing
 import { Auth } from './pages/auth/index';  // Importing the Auth component from the 'auth' directory
 import { ExpenseTraker } from './pages/expense-traker/index';  // Importing the ExpenseTraker component from the 'expense-traker' directory
+import { NumberGenerator } from './pages/random-tracker/NumberGenerator'
 
 // Defining the main App component
 function App() {
@@ -18,6 +19,7 @@ function App() {
           
           {/* Route for the expense tracker page, rendering the ExpenseTraker component */}
           <Route path='/expense-tracker' exact element={<ExpenseTraker />} />
+          
         </Routes>
       </Router>
     </div>

@@ -55,7 +55,7 @@ export const useGetTransactions = () => {
     // useEffect hook to trigger the getTransactions function on component mount
     useEffect(() => {
         getTransactions();
-    }, []);
+    },);
 
     // Returning the fetched transactions for external use
     return { transactions };
