@@ -19,7 +19,7 @@ function App() {
           
           {/* Route for the expense tracker page, rendering the ExpenseTraker component */}
           <Route path='/expense-tracker' exact element={<ExpenseTraker />} />
-          
+          <Route path='/random-tracker' element={<NumberGenerator />} />
         </Routes>
       </Router>
     </div>

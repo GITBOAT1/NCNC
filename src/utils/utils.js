@@ -4,10 +4,10 @@ export const getFullYear = () => {
 
 export const getFooterCopy = (isIndex) => {
     if (isIndex) {
-      return ("Holberton School");
+      return ("NOBLE CONTRIBUTION(NCNC)");
     }
     else {
-      return("Holberton School main dashboard");
+      return("NOBLE CONTRIBUTION");
     }
 }
 

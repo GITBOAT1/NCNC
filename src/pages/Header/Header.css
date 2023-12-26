@@ -1,0 +1,11 @@
+.App-header {
+  display: flex;
+  margin-top: 20px;
+  padding-top: 200px;
+  flex-direction: row; /* or 'column' based on your design */
+  align-items: center;
+  justify-content: flex-start; /* or 'center', 'flex-end', etc. */
+  font-size: calc(2px + 2vmin);
+  color: white;
+  border-bottom: 45px solid red;
+}

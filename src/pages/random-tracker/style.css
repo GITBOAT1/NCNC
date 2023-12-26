@@ -1,0 +1,37 @@
+.lower {
+    min-height: 50vh;
+ }
+
+ .generate{
+    border: none;
+    margin: 6px;
+    width: 100px;
+    height: 60px;
+    background: #3498db;
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 7px;
+    font-weight: bold;
+    padding: 1px 2px 1px 2px;
+    text-decoration: none;
+  }
+
+  input[type=number], select {
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #3c60ef;;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #3c60ef;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }

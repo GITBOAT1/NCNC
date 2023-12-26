@@ -1,5 +1,6 @@
 .App-footer {
-    border-top: 5px solid red;
+    margin-top: 10%;
+    border-top: 5px solid rgb(208, 225, 240);
     text-align: center;
     font-size: calc(2px + 2vmin);
     align-items: center;
