@@ -1,4 +1,13 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body {
   padding: 0;
-  margin: 50px;
+  margin: 0;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
 }

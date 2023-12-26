@@ -8,6 +8,11 @@ import { userGetUserInfo } from "./useGetUserinfo";
 export const useGetTransactions = () => {
     // State variable to store fetched transactions
     const [transactions, setTransactions] = useState([]);
+    const [transactonTotoals, setTransactionTotals] = useState({
+        balance: 0.0,
+        income: 0.0,
+        expenses: 0.0,
+    });
 
     // Reference to the "transactions" collection in Firestore
     const transactionCollectionRef = collection(db, "transactions");
@@ -30,6 +35,8 @@ export const useGetTransactions = () => {
             // Subscribing to real-time updates using onSnapshot
             unsubscribe = onSnapshot(queryTransactions, (snapshot) => {
                 let docs = [];
+                let totalIncome = 0;
+                let totalExpenses = 0;
 
                 // Iterating through the snapshot to extract data and document IDs
                 snapshot.forEach((doc) => {
@@ -38,10 +45,24 @@ export const useGetTransactions = () => {
 
                     // Pushing an object with data and ID to the docs array
                     docs.push({ ...data, id });
+                    
+                    if (data.transactionType === "expense") {
+                        totalExpenses += Number(data.transactionAmount);
+                      } else {
+                        totalIncome += Number(data.transactionAmount);
+                      }
+
                 });
 
                 // Updating the state with the fetched transactions
                 setTransactions(docs);
+                
+                let balance = totalIncome - totalExpenses;
+                setTransactionTotals({
+                    balance,
+                    expenses: totalExpenses,
+                    income: totalIncome,
+                });
             });
         } catch (err) {
             console.error("Error fetching transactions:", err);
@@ -55,8 +76,8 @@ export const useGetTransactions = () => {
     // useEffect hook to trigger the getTransactions function on component mount
     useEffect(() => {
         getTransactions();
-    },);
+      },);
 
     // Returning the fetched transactions for external use
-    return { transactions };
+    return { transactions, transactonTotoals };
 };

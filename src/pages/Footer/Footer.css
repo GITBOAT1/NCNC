@@ -1,0 +1,7 @@
+.App-footer {
+    border-top: 5px solid red;
+    text-align: center;
+    font-size: calc(2px + 2vmin);
+    align-items: center;
+    justify-content: center;
+  }

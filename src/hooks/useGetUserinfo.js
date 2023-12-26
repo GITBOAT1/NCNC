@@ -2,8 +2,7 @@
 export const userGetUserInfo = () => {
     // Parsing user information from localStorage
     const { name, profilePhoto, userID, isAuth } = JSON.parse(
-        localStorage.getItem("auth")
-    );
+        localStorage.getItem("auth")) || {};
 
     // Returning an object containing user information
     return { name, profilePhoto, userID, isAuth };
