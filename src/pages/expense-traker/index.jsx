@@ -42,10 +42,7 @@ export const ExpenseTraker = () => {
   return (
     <>
       <Header />
-      {/* i will separate them soon*/}
-      <header className="w3-container" style={{paddingTop: '22px'}}>
-        <h5><b><i className="fa fa-dashboard"></i> My Dashboard</b></h5>
-      </header>
+
       <div className="page-container ">
       <div className="w3-main" style={{marginLeft: '300px', marginTop: '43px'}}>
         <div className="w3-container">

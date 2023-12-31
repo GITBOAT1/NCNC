@@ -1,7 +1,7 @@
 // Sidebar.js
 import React from 'react';
 import './Header.css';
-import NavigationMenu from './NavigationMenu';
+import NavigationMenu from '../NavigationMenu/NavigationMenu';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
